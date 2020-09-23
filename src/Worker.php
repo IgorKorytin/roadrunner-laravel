@@ -288,9 +288,9 @@ class Worker implements WorkerInterface
     {
         return new PsrHttpFactory(
             new \Spiral\RoadRunner\Diactoros\ServerRequestFactory(),
-            new \Spiral\RoadRunner\Diactoros\StreamFactory(),
-            new \Spiral\RoadRunner\Diactoros\UploadedFileFactory(),
-            new \Laminas\Diactoros\ResponseFactory()
+            new \Nyholm\Psr7\Factory\Psr17Factory(),
+            new \Nyholm\Psr7\Factory\Psr17Factory(),
+            new \Nyholm\Psr7\Factory\Psr17Factory()
         );
     }
 }
